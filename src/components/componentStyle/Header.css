@@ -1,0 +1,120 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(255, 238, 5, 0.329);
+}
+
+
+.links {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  width: 50%;
+}
+
+
+.links ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.links li {
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius:2rem;
+}
+
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.links li:hover {
+  background-color: #fff;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.ham {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ham {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: gold;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.login-link {
+  padding: 0.4rem 1.2rem;
+  background: transparent;
+  color: #333;
+  border: 1.5px solid #333;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.login-link:hover {
+  background: #333;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .logout-btn, .login-link {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+

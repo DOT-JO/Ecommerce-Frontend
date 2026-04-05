@@ -1,0 +1,219 @@
+/* Checkout.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.checkoutPage {
+  min-height: 100vh;
+  background: #f8f7f4;
+  padding: 2rem;
+  font-family: 'Tajawal', sans-serif;
+  direction: rtl;
+}
+
+/* ── HEADER ── */
+.checkoutHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.checkoutTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.checkoutSubtitle {
+  color: #888;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* ── LAYOUT ── */
+.checkoutLayout {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* ── ITEMS CARD ── */
+.checkoutItemsCard {
+  flex: 2;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-width: 280px;
+}
+
+.checkoutSectionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ── SINGLE ITEM ── */
+.checkoutItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.checkoutItem:last-child {
+  border-bottom: none;
+}
+
+.checkoutItemInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkoutItemImg {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.checkoutItemName {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.checkoutBadge {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #555;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.25rem;
+}
+
+.checkoutItemRight {
+  text-align: left;
+}
+
+.checkoutItemQty {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.checkoutItemPrice {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 1rem;
+}
+
+/* ── SUMMARY CARD ── */
+.checkoutSummary {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-width: 240px;
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+}
+
+.checkoutSummaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.checkoutSummaryRow.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.checkoutFree {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.checkoutDivider {
+  border: none;
+  border-top: 2px solid #f0f0f0;
+  margin: 0.75rem 0;
+}
+
+.checkoutConfirmBtn {
+  width: 100%;
+  padding: 0.85rem;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Tajawal', sans-serif;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.checkoutConfirmBtn:hover:not(:disabled) {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.checkoutConfirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkoutBackBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  color: #888;
+  border: 1.5px solid #ddd;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-family: 'Tajawal', sans-serif;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  transition: all 0.2s;
+}
+
+.checkoutBackBtn:hover {
+  border-color: #aaa;
+  color: #555;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .checkoutLayout {
+    flex-direction: column;
+  }
+
+  .checkoutSummary {
+    position: static;
+  }
+
+  .checkoutPage {
+    padding: 1rem;
+  }
+}

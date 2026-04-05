@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Baloo+2&display=swap');
+
+/* MAIN HEADER */
+.main-header {
+  position: relative;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+/* BACKGROUND LAYER */
+.main-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: 
+    linear-gradient(rgba(255, 243, 162, 0.6), rgba(255, 255, 255, 0.8)),
+    url('/bubbles-2.png');
+
+  background-size: contain;
+  background-position: center;
+
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+/* CONTENT */
+.header-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  padding: 20px;
+}
+
+/* TITLE */
+.header-content h2 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 45px;
+  color: #fff;
+
+  text-shadow:
+    2px 2px 0 #b8a353,
+    4px 4px 0 #000;
+
+  max-width: 800px;
+}
+
+.shop-btn {
+  width: 50%;
+  padding:1rem;
+  background: transparent;
+  color: gold;
+  border: 1.5px solid #ddd;
+  border-radius:2rem;
+  font-size: 0.9rem;
+  font-family: 'Tajawal', sans-serif;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  transition: all 0.2s;
+}
+
+.shop-btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
