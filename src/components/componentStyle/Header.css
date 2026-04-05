@@ -67,13 +67,14 @@
     right: 0;
     background-color: gold;
     width: 200px;
-    display: none;
+    display: none;  /* hide by default on mobile */
     flex-direction: column;
     padding: 10px;
+    z-index: 999;  /* add this so it appears above other elements */
   }
 
   .links.active {
-    display: flex;
+    display: flex;  /* show when active */
   }
 
   .links ul {
@@ -81,7 +82,6 @@
     gap: 10px;
   }
 }
-
 
 
 
