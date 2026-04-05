@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const API= axios.create({                //Create Axios instance
-    baseURL:"http://localhost:8001"         
+    baseURL:"https://backend1-u5fc.onrender.com"         
 })
 
 API.interceptors.request.use((req)=>{                   //Run this function before every request is sent So ANY request like    API.get(...) / API.post(...) will pass through this function first

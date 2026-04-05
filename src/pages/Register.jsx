@@ -17,7 +17,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8001/users/register", {
+      const res = await axios.post("https://backend1-u5fc.onrender.com/users/register", {
         name,
         email,
         password
@@ -27,7 +27,7 @@ const Register = () => {
 
       localStorage.setItem("token", res.data.token)
 
-      navigate("/");  
+      navigate("/login");  
 
     } catch (err) {
       console.log(err.response?.data || err.message);

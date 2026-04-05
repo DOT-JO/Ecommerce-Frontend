@@ -20,7 +20,7 @@ const Checkout = () => {
         return;
       }
 
-      const res = await fetch("http://localhost:8001/orders/create", {
+      const res = await fetch("https://backend1-u5fc.onrender.com/orders/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
